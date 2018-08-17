@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setsuna", "Setsuna.csproj", "{EE6561C7-BA49-4DA8-8469-FE96CAA2686C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Setsuna", "Setsuna\Setsuna.csproj", "{205E858A-47E2-4FFE-B429-223FC3B8EF88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE6561C7-BA49-4DA8-8469-FE96CAA2686C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE6561C7-BA49-4DA8-8469-FE96CAA2686C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE6561C7-BA49-4DA8-8469-FE96CAA2686C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE6561C7-BA49-4DA8-8469-FE96CAA2686C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205E858A-47E2-4FFE-B429-223FC3B8EF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205E858A-47E2-4FFE-B429-223FC3B8EF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205E858A-47E2-4FFE-B429-223FC3B8EF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205E858A-47E2-4FFE-B429-223FC3B8EF88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FE172A6F-E889-484C-862E-58ED200CCCF4}
+		SolutionGuid = {0AEC1605-B680-4C58-8526-180D5B31B0C2}
 	EndGlobalSection
 EndGlobal

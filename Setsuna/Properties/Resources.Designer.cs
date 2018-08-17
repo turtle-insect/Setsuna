@@ -106,6 +106,15 @@ namespace Setsuna.Properties {
         }
         
         /// <summary>
+        ///   OpenForce に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuFileOpenForce {
+            get {
+                return ResourceManager.GetString("MenuFileOpenForce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   (_S)ave に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MenuFileSave {

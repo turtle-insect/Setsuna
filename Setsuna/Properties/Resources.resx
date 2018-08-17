@@ -132,6 +132,9 @@
   <data name="MenuFileOpen" xml:space="preserve">
     <value>(_O)pen</value>
   </data>
+  <data name="MenuFileOpenForce" xml:space="preserve">
+    <value>OpenForce</value>
+  </data>
   <data name="MenuFileSave" xml:space="preserve">
     <value>(_S)ave</value>
   </data>

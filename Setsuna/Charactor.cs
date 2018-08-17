@@ -51,5 +51,17 @@ namespace Setsuna
 			get { return SaveData.Instance().ReadNumber(mAddress + 14, 2); }
 			set { Util.WriteNumber(mAddress + 14, 2, value, 1, 999); }
 		}
+
+		public uint Attack
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 16, 2); }
+			set { Util.WriteNumber(mAddress + 16, 2, value, 1, 999); }
+		}
+
+		public uint Magic
+		{
+			get { return SaveData.Instance().ReadNumber(mAddress + 18, 2); }
+			set { Util.WriteNumber(mAddress + 18, 2, value, 1, 999); }
+		}
 	}
 }

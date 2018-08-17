@@ -52,6 +52,11 @@ namespace Setsuna
 			Load(false);
 		}
 
+		private void MenuItemFileOpenForce_Click(object sender, RoutedEventArgs e)
+		{
+			Load(true);
+		}
+
 		private void MenuItemFileSave_Click(object sender, RoutedEventArgs e)
 		{
 			Save();
