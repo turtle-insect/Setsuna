@@ -32,7 +32,21 @@
             </ToolBar>
             <TabControl>
                 <TabItem Header="{x:Static properties:Resources.TabItemBasic}">
-                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="17*"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="{x:Static properties:Resources.BasicMoney}"/>
+                        <TextBox Grid.Column="1" Text="{Binding Money, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
                 </TabItem>
                 <TabItem Header="{x:Static properties:Resources.TabItemCharactor}">
                     <Grid>
@@ -75,6 +89,47 @@
                             <Label Grid.Row="7" Content="Magic"/>
                             <TextBox Grid.Column="1" Grid.Row="7" Text="{Binding ElementName=CharactorList, Path=SelectedItem.Magic, UpdateSourceTrigger=PropertyChanged}"/>
                         </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemItems}">
+                    <ListBox ItemsSource="{Binding Items}">
+                        <ListBox.Resources>
+                            <local:ItemNameConverter x:Key="ItemNameConverter"/>
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Count : "/>
+                                    <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="50"/>
+                                    <Button Content="..." Click="ButtonItemChoice_Click"/>
+                                    <Label Content="{Binding ID, Converter={StaticResource ItemNameConverter}}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemParty}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox ItemsSource="{Binding PartyMembers}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox ItemsSource="{Binding DataContext.Info.Chars, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:MainWindow}}"
+                                              DisplayMemberPath="Name" SelectedIndex="{Binding ID}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <ListBox Grid.Column="1" ItemsSource="{Binding BattleMembers}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox ItemsSource="{Binding DataContext.Info.Chars, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:MainWindow}}"
+                                              DisplayMemberPath="Name" SelectedIndex="{Binding ID}"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </Grid>
                 </TabItem>
             </TabControl>

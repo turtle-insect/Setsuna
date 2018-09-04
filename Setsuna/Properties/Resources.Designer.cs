@@ -47,7 +47,7 @@ namespace Setsuna.Properties {
         }
         
         /// <summary>
-        ///   厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
+        ///   すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -57,6 +57,51 @@ namespace Setsuna.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Money に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string BasicMoney {
+            get {
+                return ResourceManager.GetString("BasicMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceCancel {
+            get {
+                return ResourceManager.GetString("ItemChoiceCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filter に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceFilter {
+            get {
+                return ResourceManager.GetString("ItemChoiceFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OK に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceOK {
+            get {
+                return ResourceManager.GetString("ItemChoiceOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Item Selection に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ItemChoiceTitle {
+            get {
+                return ResourceManager.GetString("ItemChoiceTitle", resourceCulture);
             }
         }
         
@@ -192,6 +237,15 @@ namespace Setsuna.Properties {
         public static string TabItemItems {
             get {
                 return ResourceManager.GetString("TabItemItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Party に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemParty {
+            get {
+                return ResourceManager.GetString("TabItemParty", resourceCulture);
             }
         }
         

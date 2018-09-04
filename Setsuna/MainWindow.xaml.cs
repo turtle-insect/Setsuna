@@ -78,7 +78,7 @@ namespace Setsuna
 
 		private void MenuItemAbout_Click(object sender, RoutedEventArgs e)
 		{
-			
+			new AboutWindow().ShowDialog();
 		}
 
 		private void ToolBarFileOpen_Click(object sender, RoutedEventArgs e)
@@ -89,6 +89,15 @@ namespace Setsuna
 		private void ToolBarFileSave_Click(object sender, RoutedEventArgs e)
 		{
 			Save();
+		}
+
+		private void ButtonItemChoice_Click(object sender, RoutedEventArgs e)
+		{
+			Item item = (sender as Button).DataContext as Item;
+			ItemChoiceWindow window = new ItemChoiceWindow();
+			window.ID = item.ID;
+			window.ShowDialog();
+			item.ID = window.ID;
 		}
 
 		private void Init()
